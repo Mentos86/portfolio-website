@@ -4,51 +4,102 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Menno Pardoel</title>
+    <title>Portfolio Website</title>
     <link href="styles/style.css" rel="stylesheet">
     <script href=""></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c613d86174.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section class="header">
         <nav>
             <a href="index.html"><img src="/images/Logo white.jpg" alt="logo"></a>
-            <div class="nav-links">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#About-me">About me</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-square-xmark" onclick="hideMenu()"></i>
+                   <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#About-me">About me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#Contact">Contact</a></li>
+                    </ul>
             </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
     </section>
-    
+
+<!--- Introduction section --->
+
     <div class="text-box">
-        <h1>Portfolio Website Menno</h1>
+        <h1>Portfolio website Menno Pardoel</h1>
         <p>Learning HTML, CSS and Javascript to understand the basics of web development <br> before going deeper into Web3 data analysis with Python and web 3 development</p>
         <a href="" class="my-btn">See ABOUT ME to know more</a>
     </div>
     
-    <main>
-        <h1 id="About-me">About Me</h1>
-            <p>Investment professional over 10 years of working experience in M&A and financing. Specialised in financial modeling and analysis.</p>
-        <h1 id="Projects">Projects</h1>
-            <div class="container">
-                <div>Project 1</div>
+<!--- My projects section --->
+
+    <section class="projects">
+        <h1>My Projects</h1>
+        <p>Tried to test different skill sets</p>
+
+        <div class="row">
+            <div class="projects-column">
+                <h3>Project 1</h3>
+                <p>This is my first project for which I used my first HTML and CSS</p>
             </div>
-        <h1 id="Skills">Skills</h1>
-        <h1 id="Contact">Contact</h1>
-    </main>
-    <div class="loader-container">
-        <div class="loader"></div>
-    </div>
+            <div class="projects-column">
+                <h3>Project 2</h3>
+                <p>This is my second project for which I also used vanilla javascrip to interact with the DOM</p>
+            </div>
+            <div class="projects-column">
+                <h3>Project 3</h3>
+                <p>This is my third project for which I also used a framework and database management</p>
+            </div>
+        </div>
+    </section>
     
+<!--- My Skills section --->
+    <section class="skills">
+        <h1>My Skills</h1>
+        <p>These are the various languages I worked on</p>
+        <div class="row">
+            <div class="skills-column">
+                <img src="/images/HTML.png" alt="logo">
+                <div class="layer">
+                    <h3>HTML</h3>
+                </div>
+            </div>
+            <div class="skills-column">
+                <img src="/images/CSS.png" alt="logo">
+                <div class="layer">
+                    <h3>CSS</h3>
+                </div>
+            </div>
+            <div class="skills-column">
+                <img src="/images/JS.png" alt="logo">
+                <div class="layer">
+                    <h3>Javascript</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         Created by MP86
     </footer>
+
+<!-- Javascript toggle menu -->
+<script>
+    const navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
 </body>
 </html>
